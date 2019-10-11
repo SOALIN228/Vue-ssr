@@ -7,10 +7,11 @@
     <Item v-for="todo in filteredTodos" :key="todo.id"
           :todo="todo"
           @del="deleteTodo"
+          @toggle="checkToggle"
     ></Item>
     <Tabs :filter="filter"
           :todos="todos"
-          @togole="togoleFilter"
+          @toggle="toggleFilter"
           @clearAllCompleted="clearAllCompleted"
     ></Tabs>
   </section>
@@ -54,11 +55,18 @@ export default {
     deleteTodo (id) {
       this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1)
     },
-    togoleFilter (state) {
+    toggleFilter (state) {
       this.filter = state
     },
     clearAllCompleted () {
       this.todos = this.todos.filter(todo => !todo.completed)
+    },
+    checkToggle (checkItem) {
+      this.todos.map(item => {
+        if (item.id === checkItem.id) {
+          item.completed = !item.completed
+        }
+      })
     }
   }
 }

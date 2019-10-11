@@ -11,6 +11,7 @@
 import Header from './page/header.vue'
 import Todo from './page/todo.vue'
 import Footer from './page/footer.vue'
+
 export default {
   name: 'App',
   components: {
@@ -31,6 +32,7 @@ export default {
     right: 0;
     top: 0;
     bottom: 0;
+
     #cover {
       position: absolute;
       left: 0;
