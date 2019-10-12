@@ -38,6 +38,12 @@ const commonConfig = {
             limit: 20480 // 图片大于2kb使用base64进行打包，减少http请求
           }
         }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/, // 字体格式
+        use: [{
+          loader: 'file-loader'
+        }]
       }
     ]
   },
