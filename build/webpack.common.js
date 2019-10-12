@@ -22,6 +22,13 @@ const commonConfig = {
         loader: 'vue-loader'
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/, // 对node_modules中的JS进行忽略
+        use: [{
+          loader: 'babel-loader'
+        }]
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: {
           loader: 'url-loader',
