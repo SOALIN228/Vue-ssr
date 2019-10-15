@@ -18,6 +18,12 @@ const commonConfig = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.(vue|js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader'
       },
@@ -51,7 +57,13 @@ const commonConfig = {
     new CleanWebpackPlugin(), // 自动清空输出文件
     new HtmlWebpackPlugin({ template: 'index.html' }), // 指定html模板文件
     new VueLoaderPlugin()
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all' // 默认为 async
+    },
+    runtimeChunk: true
+  }
 }
 
 module.exports = () => {
