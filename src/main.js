@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import './assets/styles/global.scss'
 
+// eslint-disable-next-line no-new
 new Vue({
-  render: (h) => h(App)
-}).$mount(document.getElementById('app'))
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})

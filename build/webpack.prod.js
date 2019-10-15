@@ -28,7 +28,7 @@ const prodConfig = {
   },
   output: {
     filename: '[name].[contenthash:8].js', // 输出文件名
-    chunkFilename: '[id].[contenthash:8].js', // 入口文件拆分后名字格式
+    chunkFilename: '[id].[contenthash:8].js' // 入口文件拆分后名字格式
   }
 }
 

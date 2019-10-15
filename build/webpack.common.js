@@ -63,6 +63,12 @@ const commonConfig = {
       chunks: 'all' // 默认为 async
     },
     runtimeChunk: true
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
   }
 }
 
