@@ -1,5 +1,5 @@
 <template>
-  <div :class="itemClass">
+  <div class="todo-item" :class="itemClass">
     <input type="checkbox"
            class="toggle"
            :checked="todo.completed"
@@ -24,8 +24,7 @@ export default {
   computed: {
     itemClass () {
       return {
-        'todo-item': true,
-        'completed': this.todo.completed
+        completed: this.todo.completed
       }
     }
   },

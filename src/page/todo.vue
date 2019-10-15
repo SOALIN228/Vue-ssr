@@ -10,7 +10,7 @@
           @toggle="checkToggle"
     ></Item>
     <Tabs :filter="filter"
-          :todos="todos"
+          :todos="filteredTodos"
           @toggle="toggleFilter"
           @clearAllCompleted="clearAllCompleted"
     ></Tabs>
