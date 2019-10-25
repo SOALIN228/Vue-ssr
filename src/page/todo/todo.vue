@@ -24,6 +24,20 @@ import Tabs from './tabs.vue'
 
 export default {
   name: 'Todo',
+  beforeRouteEnter (to, from, next) {
+    console.log('beforeRouteEnter')
+    next(vm => {
+      console.log(vm)
+    })
+  },
+  beforeRouteUpdate (to, from, next) {
+    console.log('beforeRouteUpdate')
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log('beforeRouteLeave')
+    next()
+  },
   components: {
     Item,
     Tabs

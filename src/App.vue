@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <div id="cover"></div>
-    <router-link :to="{path: '/app'}">app</router-link>
-    <router-link :to="{path: '/login/123'}">login</router-link>
+    <router-link :to="{path: '/app/123'}">app123</router-link>
+    <router-link :to="{path: '/app/456'}">app456</router-link>
+    <router-link :to="{path: '/login'}">login</router-link>
     <Header></Header>
-    <transition name="fade">
-      <router-view/>
-    </transition>
+<!--    <transition name="fade">-->
+<!--      <router-view/>-->
+<!--    </transition>-->
+    <router-view/>
     <Footer></Footer>
   </div>
 </template>
