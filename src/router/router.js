@@ -1,6 +1,3 @@
-import Todo from '../page/todo/todo'
-import Login from '../page/login/login'
-
 export default [
   {
     path: '/',
@@ -9,7 +6,7 @@ export default [
   {
     path: '/app/:id',
     name: 'app',
-    component: Todo,
+    component: () => import('../page/todo/todo'),
     props: true,
     beforeEnter: (to, from, next) => {
       console.log('beforeEnter')
@@ -18,6 +15,6 @@ export default [
   }, {
     path: '/login',
     name: 'login',
-    component: Login
+    component: () => import('../page/login/login')
   }
 ]

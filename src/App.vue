@@ -5,10 +5,9 @@
     <router-link :to="{path: '/app/456'}">app456</router-link>
     <router-link :to="{path: '/login'}">login</router-link>
     <Header></Header>
-<!--    <transition name="fade">-->
-<!--      <router-view/>-->
-<!--    </transition>-->
-    <router-view/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
     <Footer></Footer>
   </div>
 </template>
@@ -25,9 +24,6 @@ export default {
   },
   data () {
     return {}
-  },
-  mounted () {
-    console.log(this.$route)
   }
 }
 </script>

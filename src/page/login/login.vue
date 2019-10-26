@@ -1,5 +1,7 @@
 <template>
-  <div>login123</div>
+  <div>
+    login123
+  </div>
 </template>
 
 <script>
