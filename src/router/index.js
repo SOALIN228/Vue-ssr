@@ -1,8 +1,5 @@
-import Vue from 'vue'
 import Router from 'vue-router'
 import routes from './router'
-
-Vue.use(Router)
 
 export default () => {
   return new Router({
@@ -11,7 +8,6 @@ export default () => {
     linkActiveClass: 'active-link', // 路径部分匹配或完全匹配
     linkExactActiveClass: 'exact-active-link', // 路径完全匹配
     scrollBehavior (to, from, savedPosition) {
-      console.log(savedPosition)
       if (savedPosition) {
         return savedPosition
       } else {

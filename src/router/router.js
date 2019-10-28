@@ -4,10 +4,9 @@ export default [
     redirect: '/app' // 默认跳转到app
   },
   {
-    path: '/app/:id',
+    path: '/app',
     name: 'app',
     component: () => import('../page/todo/todo'),
-    props: true,
     beforeEnter: (to, from, next) => {
       console.log('beforeEnter')
       next()
